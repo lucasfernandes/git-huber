@@ -1,0 +1,24 @@
+.repos-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.repos-container a {
+  text-decoration: none;
+}
+
+.repo {
+  background-color: lightgray;
+  border-radius: 3px;
+  margin: 15px;
+  padding: 15px;
+  color: #373a3a
+}
+
+.repos-container a:hover .repo {
+  background-color: rgb(190, 188, 188);
+}
