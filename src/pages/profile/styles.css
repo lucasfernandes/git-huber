@@ -78,7 +78,7 @@
   font-size: 28px;
   color: lightgray;
   line-height: 40px;
-  padding: 80px;
+  /* padding: 80px; */
 }
 
 .empty .sub  {
