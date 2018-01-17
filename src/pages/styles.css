@@ -1,18 +1,24 @@
 body {
-  display: flex;
+  /* display: flex; */
   background-color: lightgray;
   justify-content: center;
 }
 
+.app-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin: 20px;
+}
+
 .container {
   display: flex;
-  margin-top: 15px;
+  flex: 1;
   background-color: #24292e;
-  width: 1024px;
-  min-height: 700px;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 3px;
   box-shadow: 5px 5px 8px #888888;
   padding: 20px;
+  /* margin: 20px; */
 }

@@ -1,14 +1,16 @@
 import { combineReducers } from 'redux';
 
 /* Reducers */
-import { reducer as huber } from './ducks/huber';
+import { reducer as hubers } from './ducks/hubers';
+import { reducer as githuber } from './ducks/githuber';
 
 
 import configureStore from './configureStore';
 import rootSaga from './sagas';
 
 const rootReducer = combineReducers({
-  huber,
+  hubers,
+  githuber,
 });
 
 const store = configureStore(rootReducer, rootSaga);

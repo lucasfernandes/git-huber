@@ -13,7 +13,7 @@ import './styles.css';
 
 const App = () => (
   <Provider store={store}>
-    <div>
+    <div className="app-container">
       <Header />
       <div className="container">
         <Profile />

@@ -1,13 +1,16 @@
 import { all, takeLatest } from 'redux-saga/effects';
 
 /* Types */
-import { Types as HuberTypes } from 'store/ducks/huber';
+import { Types as HubersTypes } from 'store/ducks/hubers';
+import { Types as GithuberTypes } from 'store/ducks/githuber';
 
 /* Sagas */
-import { getHuber } from './huber';
+import { getHubers } from './hubers';
+import { getGitHuber } from './githuber';
 
 export default function* root() {
   yield all([
-    takeLatest(HuberTypes.HUBER_REQUEST, getHuber),
+    takeLatest(HubersTypes.HUBERS_REQUEST, getHubers),
+    takeLatest(GithuberTypes.GITHUBER_REQUEST, getGitHuber),
   ]);
 }

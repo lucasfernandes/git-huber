@@ -3,9 +3,9 @@ import { createActions, createReducer } from 'reduxsauce';
 /* Types & Creators */
 
 const { Types, Creators } = createActions({
-  huberRequest: ['user'],
-  huberSuccess: ['data', 'repos'],
-  huberFailure: null,
+  hubersRequest: ['user'],
+  hubersSuccess: ['data'],
+  hubersFailure: null,
 });
 
 export { Types };
@@ -13,8 +13,7 @@ export default Creators;
 
 /* Initial State */
 const INITIAL_STATE = {
-  data: null,
-  repos: [],
+  data: [],
   loading: false,
   error: false,
 };
@@ -29,20 +28,18 @@ export const request = state => ({
 export const success = (state, action) => ({
   ...state,
   data: action.data,
-  repos: action.repos,
   loading: false,
   error: false,
 });
 
 export const failure = () => ({
-  data: null,
-  repos: [],
+  data: [],
   loading: false,
   error: true,
 });
 
 export const reducer = createReducer(INITIAL_STATE, {
-  [Types.HUBER_REQUEST]: request,
-  [Types.HUBER_SUCCESS]: success,
-  [Types.HUBER_FAILURE]: failure,
+  [Types.HUBERS_REQUEST]: request,
+  [Types.HUBERS_SUCCESS]: success,
+  [Types.HUBERS_FAILURE]: failure,
 });

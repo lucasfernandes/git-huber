@@ -14,21 +14,21 @@ import Repos from './components/Repos';
 
 import './styles.css';
 
-const renderProfile = (huber, repos) => (
-  <div className="profileContainer">
+const renderProfile = (githuber, repos) => (
+  <div className="profile-container">
     <div className="avatar-container">
-      <img className="avatar" src={huber.avatar_url} alt="avatar" />
+      <img className="avatar" src={githuber.avatar_url} alt="avatar" />
     </div>
     <div className="profile-info">
-      <div className="name">{huber.name}</div>
-      <div className="login">{huber.login}</div>
+      <div className="name">{githuber.name}</div>
+      <div className="login">{githuber.login}</div>
       <div className="numbersContainer">
-        <div>Repos: <span>{huber.public_repos}</span></div>
-        <div>Followers: <span>{huber.followers}</span></div>
-        <div>Following: <span>{huber.following}</span></div>
+        <div>Repos: <span>{githuber.public_repos}</span></div>
+        <div>Followers: <span>{githuber.followers}</span></div>
+        <div>Following: <span>{githuber.following}</span></div>
       </div>
     </div>
-    { huber.bio && <div className="bio">{huber.bio}</div> }
+    { githuber.bio && <div className="bio">{githuber.bio}</div> }
     <Repos repos={repos} />
   </div>
 );
@@ -40,7 +40,8 @@ const renderLoading = () => (
 const renderEmpty = () => (
   <div className="empty">
     <Octicons.GoOctoface size={160} />
-    <div>Pesquise por um GitHuber</div>
+    <div>Quer saber o que os devs andam fazendo?</div>
+    <div className="sub">Pesquise sobre um GitHuber</div>
   </div>
 );
 
@@ -52,7 +53,7 @@ const renderError = () => (
 );
 
 const Profile = ({
-  huber: {
+  githuber: {
     data,
     repos,
     error,
@@ -62,11 +63,12 @@ const Profile = ({
   if (loading) return renderLoading();
   if (error) return renderError();
   if (data) return renderProfile(data, repos);
+
   return renderEmpty();
 };
 
 Profile.propTypes = {
-  huber: PropTypes.shape({
+  githuber: PropTypes.shape({
     data: PropTypes.shape({
       avatar_url: PropTypes.string,
       name: PropTypes.string,
@@ -80,7 +82,7 @@ Profile.propTypes = {
 
 
 const mapStateToProps = state => ({
-  huber: state.huber,
+  githuber: state.githuber,
 });
 
 export default connect(mapStateToProps)(Profile);

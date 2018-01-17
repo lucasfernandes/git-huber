@@ -11,7 +11,7 @@ import './styles.css';
 const Header = () => (
   <div className="headerContainer">
     <Octicons.GoMarkGithub
-      size={60}
+      size={80}
       color="#24292e"
     />
     <Search />

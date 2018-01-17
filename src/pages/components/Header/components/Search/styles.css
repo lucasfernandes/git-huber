@@ -1,13 +1,39 @@
-.searchContainer input {
-  padding: 14px;
-  font-size: 16px;
-  border: 0px;
-  border-radius: 3px;
-  border-radius: 3px;
-  box-shadow: 2px 2px 4px #999;
+.select-container {
+  background-color: red;
+  width: 200px;
 }
 
-.button {
+.option {
+  background-color: blue;
+}
+
+
+.search-select {
+  /* padding: 14px; */
+  /* font-size: 16px; */
+  /* border: 0px; */
+  /* border-radius: 3px; */
+  /* box-shadow: 2px 2px 4px #999; */
+  width: 250px;
+  /* margin: 0; */
+  /* width: 350px; */
+  /* height: 60px; */
+}
+
+/* .Select-control,
+.Select-placeholder {
+  padding: 8px;
+  padding-left: 20px;
+}
+.Select-multi-value-wrapper {
+  padding: 0;
+} */
+/* .Select-placeholder {
+  padding-top:5px;
+  padding-bottom: 5px;
+} */
+
+/* .button {
   padding: 14px;
   font-size: 16px;
   background-color: #24292e;
@@ -17,4 +43,29 @@
   margin-bottom: 3px;
   margin-left: 5px;
   box-shadow: 2px 2px 4px #999;
+} */
+
+/* Suggestions */
+.suggestionContainer {
+  position: relative;
+  /* width: 300px; */
+}
+
+.suggestions {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: #FFF;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* width: 325px; */
+  list-style: none;
+  padding: 20px;
+  border-radius: 3px;
+  margin-top: 5px;
+}
+
+.suggestions li {
+  margin-top: 4px;
 }
